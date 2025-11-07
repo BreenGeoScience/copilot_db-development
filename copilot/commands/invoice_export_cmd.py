@@ -207,7 +207,7 @@ def get_invoice_data(invoice_code):
         # Format task display - handle 'na' subtasks
         task_display = ts['task_no']
         sub_task = ts.get('sub_task_no')
-        if sub_task and str(sub_task).lower() != SUBTASK_NA_VALUE:
+        if sub_task is not None and str(sub_task).lower() != SUBTASK_NA_VALUE:
             task_display = f"{ts['task_no']}:{sub_task}"
         
         labor_items.append({
@@ -225,7 +225,7 @@ def get_invoice_data(invoice_code):
         })
     
     # Check if project is lump sum/fixed fee - if so, exclude mileage and expenses
-    is_lump_sum = inv.get('project_type', '').lower() in LUMP_SUM_PROJECT_TYPES
+    is_lump_sum = (inv.get('project_type') or '').lower() in LUMP_SUM_PROJECT_TYPES
     
     # Calculate grand total - exclude mileage/expenses for lump sum projects
     if is_lump_sum:
