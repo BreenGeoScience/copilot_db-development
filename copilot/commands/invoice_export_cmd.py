@@ -200,12 +200,18 @@ def get_invoice_data(invoice_code):
         total_mileage += mile_amt
         total_expenses += expense
         
+        # Format task display - handle 'na' subtasks
+        task_display = ts['task_no']
+        if ts['sub_task_no'] and ts['sub_task_no'].lower() != 'na':
+            task_display = f"{ts['task_no']}:{ts['sub_task_no']}"
+        
         labor_items.append({
             'date': ts['ts_date'],
             'resource': ts['res_name'] or ts['res_id'],
             'hours': hours,
             'rate': rate,
-            'task': ts['task_no'],
+            'task': task_display,
+            'sub_task': ts['sub_task_no'],
             'total': labor_amt,
             'description': ts['ts_desc'],
             'miles': miles,
@@ -293,7 +299,6 @@ def export_to_xlsx(data, output_dir):
     # Client section
     ws[f'A{row}'] = "Client"
     ws[f'A{row}'].font = header_font
-    ws[f'F{row}'] = f"Desc. {inv['project_code']}"
     row += 1
     
     ws[f'A{row}'] = inv['client_name']
@@ -443,7 +448,7 @@ def export_to_pdf(data, output_dir):
     # Date and invoice info
     info_data = [
         ["", f"Date: {inv['invoice_date'].strftime('%B %d, %Y')}"],
-        [f"Client", f"Desc. {inv['project_code']}"],
+        [f"Client", ""],
         [inv['client_name'], f"PO#: {inv['client_po'] or 'NA'}"],
         [f"{inv['city']}, {inv['state']}" if inv['city'] else "", "A/R Net 30"],
         ["", f"Baseline: {inv['project_code']}"],
@@ -671,7 +676,6 @@ def export_to_html(data, output_dir):
         </div>
         <div class="client-right" style="text-align: right;">
             <div>Date: {{ invoice.invoice_date.strftime('%B %d, %Y') }}</div>
-            <div>Desc. {{ invoice.project_code }}</div>
             <div>PO#: {{ invoice.client_po or 'NA' }}</div>
             <div>A/R Net 30</div>
             <div>Baseline: {{ invoice.project_code }}</div>
