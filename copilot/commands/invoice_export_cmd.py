@@ -9,6 +9,9 @@ from decimal import Decimal
 import os
 from pathlib import Path
 
+# Constants
+SUBTASK_NA_VALUE = 'na'
+LUMP_SUM_PROJECT_TYPES = ['lump_sum', 'fixed', 'fixed_fee']
 
 
 def create_project_directories(client_code, project_code):
@@ -203,7 +206,7 @@ def get_invoice_data(invoice_code):
         
         # Format task display - handle 'na' subtasks
         task_display = ts['task_no']
-        if ts['sub_task_no'] and ts['sub_task_no'].lower() != 'na':
+        if ts['sub_task_no'] and ts['sub_task_no'].lower() != SUBTASK_NA_VALUE:
             task_display = f"{ts['task_no']}:{ts['sub_task_no']}"
         
         labor_items.append({
@@ -222,8 +225,7 @@ def get_invoice_data(invoice_code):
         })
     
     # Check if project is lump sum/fixed fee - if so, exclude mileage and expenses
-    # Project types that indicate lump sum: 'lump_sum', 'fixed', 'fixed_fee'
-    is_lump_sum = inv.get('project_type', '').lower() in ['lump_sum', 'fixed', 'fixed_fee']
+    is_lump_sum = inv.get('project_type', '').lower() in LUMP_SUM_PROJECT_TYPES
     
     # Calculate grand total - exclude mileage/expenses for lump sum projects
     if is_lump_sum:
