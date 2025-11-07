@@ -206,8 +206,9 @@ def get_invoice_data(invoice_code):
         
         # Format task display - handle 'na' subtasks
         task_display = ts['task_no']
-        if ts['sub_task_no'] and ts['sub_task_no'].lower() != SUBTASK_NA_VALUE:
-            task_display = f"{ts['task_no']}:{ts['sub_task_no']}"
+        sub_task = ts.get('sub_task_no')
+        if sub_task and str(sub_task).lower() != SUBTASK_NA_VALUE:
+            task_display = f"{ts['task_no']}:{sub_task}"
         
         labor_items.append({
             'date': ts['ts_date'],
