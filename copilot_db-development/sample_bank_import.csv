@@ -1,0 +1,4 @@
+source_institution,source_account_code,raw_date,normalized_date,description,source_category,amount,direction
+Huntington,bgm:account,2025-10-12,2025-10-12,HYATT PLACE ANN ARBOR,Lodging,350.45,Debit
+Huntington,bgm:account,2025-10-13,2025-10-13,SHELL OIL ANN ARBOR MI,Gas,44.22,Debit
+Central Savings Bank,csb:account,2025-10-13,2025-10-13,PANERA ANN ARBOR MI,Food,17.63,Debit

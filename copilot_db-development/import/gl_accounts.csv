@@ -1,0 +1,107 @@
+id,code,major,sub,detail,description,account_type,tax_category,parent_code,status,created_at
+194,per:mortgage:interest:parnell,per,interest,1108parnell interest,Interest on mortgage for 1108parnell,expense,property,,active,2025-11-10 10:13:00.777716
+91,mhb:mortgage:711pine,mhb,mortgage,711pine,mortgage balance,liability,property,,active,2025-11-09 23:43:10.525063
+142,mhb:mortgage:819helen,mhb,mortgage,819helen,mortgage balance,liability,property,,active,2025-11-09 23:43:10.525063
+143,mhb:mortgage:905brown,mhb,mortgage,905brown,mortgage balance,liability,property,,active,2025-11-09 23:43:10.525063
+130,mhb:accountant,mhb,accountant,accountant,accountant professional fees,expense,deductible,,active,2025-11-09 23:43:10.525063
+131,mhb:equipment,mhb,equipment,,rental equipment fees for MHB,expense,deductible,,active,2025-11-09 23:43:10.525063
+87,mhb:tax:711pine,mhb,tax,711pine-01,Property Taxes for 711 Pine,expense,property,,active,2025-11-09 23:43:10.525063
+83,mhb:income:rent:711pine-01,mhb,income,rent:711pine-01,Rental Income for 711 Pine Unit 01,income,,,active,2025-11-09 23:43:10.525063
+84,mhb:income:rent:711pine-02,mhb,income,rent:711pine-02,Rental Income for 711 Pine Unit 02,income,,,active,2025-11-09 23:43:10.525063
+85,mhb:maintenance:711pine-01,mhb,maintenance,711pine-01,Maintenance costs 711 Pine Unit 01,expense,property,,active,2025-11-09 23:43:10.525063
+86,mhb:maintenance:711pine-02,mhb,maintenance,711pine-02,Maintenance costs 711 Pine Unit 02,expense,property,,active,2025-11-09 23:43:10.525063
+134,mhb:income:rent:819helen,mhb,income,rent:819helen,Rental Income for 819 Helen,income,,,active,2025-11-09 23:43:10.525063
+135,mhb:income:rent:905brown,mhb,income,rent:905brown,Rental Income for 905 Brown,income,,,active,2025-11-09 23:43:10.525063
+136,mhb:income:sale:baird,mhb,income,sale:baird,Sale of Property on Baird,income,,,active,2025-11-09 23:43:10.525063
+137,mhb:legal,mhb,legal,,Profession legal fees MHB,expense,,,active,2025-11-09 23:43:10.525063
+138,mhb:maintenance:905brown,mhb,maintenance,905brown,Maintenance costs 905 Brown,expense,property,,active,2025-11-09 23:43:10.525063
+192,mhb:mortgage:interest:905brown,mhb,interest,905brown interest,interest on mortgage for 905brown,expense,property,,active,2025-11-10 10:10:08.226964
+193,mhb:mortgage:interest:819helen,mhb,interest,819helen interest,Interest on mortgage for 819helen,expense,property,,active,2025-11-10 10:11:56.393462
+97,mhb:utility:electric:711pine-01,mhb,utility,electric:711pine-01,Electric bill 711 Pine Unit 01,expense,property,,active,2025-11-09 23:43:10.525063
+195,mhb:mortgage:escrow:711pine,mhb,escrow,711pine escrow,711 Pine escrow for insurance,escrow,property,,active,2025-11-10 10:18:33.132921
+196,mhb:mortgage:escrow:905brown,mhb,escrow,905brown escrow,905 Brown escrow for insurance,escrow,property,,active,2025-11-10 10:20:40.11335
+197,mhb:mortgage:escrow:819helen,mhb,escrow,819helen escrow,819 Helen escrow for insurance,escrow,property,,active,2025-11-10 10:21:59.953416
+144,mhb:pest control:711pine,mhb,pest control,711pine,Pest control for 711 Pine,expense,property,,active,2025-11-09 23:43:10.525063
+95,mhb:utility:water:711pine,mhb,utility,water:711pine,Water Bill 711 Pine,expense,property,,active,2025-11-09 23:43:10.525063
+93,mhb:utility:gas:711pine-01,mhb,utility,gas:711pine-01,Gas bill 711 Pine Unit 01,expense,property,,active,2025-11-09 23:43:10.525063
+94,mhb:utility:gas:711pine-02,mhb,utility,gas:711pine-02,Gas bill 711 Pine Unit 02,expense,property,,active,2025-11-09 23:43:10.525063
+98,mhb:utility:electric:711pine-02,mhb,utility,electric:711pine-02,Electric bill 711 Pine Unit 02,expense,property,,active,2025-11-09 23:43:10.525063
+73,bgm:account,account,bgm,account,Main bank account for BGM,asset,,,active,2025-11-09 23:43:10.525063
+140,mhb:maintenance:snow removal,mhb,maintenance,snow removal,snow removal,expense,property,,active,2025-11-09 23:43:10.525063
+145,mhb:rental registration,mhb,rental registration,,City of SSM rental registration costs,expense,,,active,2025-11-09 23:43:10.525063
+132,mhb:draw:fbreen,mhb,fbreen,dispersment,dispersements to F.Breen,expense,deductible,,active,2025-11-09 23:43:10.525063
+141,mhb:draw:mbreen,mhb,mbreen,dispersement,Dispersments to M.Bren,expense,,,active,2025-11-09 23:43:10.525063
+133,mhb:income:reimbursement,mhb,income,reimbursement,,income,,,active,2025-11-09 23:43:10.525063
+198,per:mortgage:escrow:parnell,per,escrow,parnell escrow,1108 Parnell escrow for insurance / tax,escrow,property,,active,2025-11-10 10:25:52.594519
+202,per:mortgage:fees:parnell,per,fees,1108parnell fees,Fees on mortgage for 1108parnell,expense,property,,active,2025-11-10 10:29:51.525155
+162,mhb:mortgage:interest:711pine,mhb,interest,711pine interest,Interest on mortgage for 711pine,expense,,,active,2025-11-09 23:43:10.525063
+80,mhb:asset:711pine,asset,711pine,,711 Pine Property Asset Value,asset,property,,active,2025-11-09 23:43:10.525063
+82,mhb:asset:905brown,asset,905brown,,905 Brown Property Asset Value,asset,property,,active,2025-11-09 23:43:10.525063
+81,mhb:asset:819helen,asset,819helen,,819 Helen Property Asset Value,asset,property,,active,2025-11-09 23:43:10.525063
+148,mhb:tax:819helen,mhb,tax,819helen,Property Taxes for 819 Helen,expense,property,,active,2025-11-09 23:43:10.525063
+149,mhb:tax:905brown,mhb,tax,905brown,Property Taxes for 905 Brown,expense,property,,active,2025-11-09 23:43:10.525063
+150,mhb:tax:baird,mhb,tax,baird,Property Taxes for Baird,expense,property,,active,2025-11-09 23:43:10.525063
+151,mhb:utility:electric:905brown,mhb,utility,electric:905brown,Electric bill 905 Brown,expense,property,,active,2025-11-09 23:43:10.525063
+152,mhb:utility:gas:905brown,mhb,utility,gas:905brown,Gas bill 905 Brown ,expense,property,,active,2025-11-09 23:43:10.525063
+153,mhb:utility:gas:baird,mhb,utility,gas:baird,Gas bill Baird,expense,property,,active,2025-11-09 23:43:10.525063
+154,mhb:utility:water:905brown,mhb,utility,water:905brown,Water Bill 905 Brown,expense,property,,active,2025-11-09 23:43:10.525063
+156,mhb:water heater:711pine-02,mhb,water heater,711pine-02,Water Heater Replace/Repair 711 Pine Unit 02,expense,property,,active,2025-11-09 23:43:10.525063
+184,per:utility:electric:parnell,utility,electric,1108parnell,Electric bill for Parnell,expense,,,active,2025-11-09 23:43:10.525063
+170,per:dining,personal,dining,dining,personal dining expenses,expense,,,active,2025-11-09 23:43:10.525063
+185,per:utility:gas:parnell,utility,gas,1108parnell,Gas bill for Parnell,expense,,,active,2025-11-09 23:43:10.525063
+187,per:utility:water:parnell,utility,water,1108parnell,Water Bill for Parnell,expense,,,active,2025-11-09 23:43:10.525063
+174,per:entertain:movies,personal,movies,movie,personal entertainment movies / subscriptions,expense,,,active,2025-11-09 23:43:10.525063
+74,cash:account,account,cash,account,General Cash account,asset,,,active,2025-11-09 23:43:10.525063
+199,mhb:mortgage:fees:711pine,mhb,fees,711pine fees,Fees on mortagage for 711pine,expense,property,,active,2025-11-10 10:27:14.470723
+200,mhb:mortgage:fees:905brown,mbh,fees,905brown fees,Fees on mortgage for 905brown,expense,property,,active,2025-11-10 10:28:05.544934
+75,csb:account,account,csb,account,Personal checking account,asset,,,active,2025-11-09 23:43:10.525063
+201,mhb:mortgage:fees:819helen,mhb,fees,819helen fees,Fees on mortgage for 819helen,expense,property,,active,2025-11-10 10:29:04.509102
+76,bgm:debit,account,debit,account,BGM debit account,asset,,,active,2025-11-09 23:43:10.525063
+160,per:mortgage:parnell,per,mortgage,1108parnell,mortgage balance,liability,,,active,2025-11-09 23:43:10.525063
+77,medical:account,account,medical,account,Medical Account,asset,,,active,2025-11-09 23:43:10.525063
+78,mhb:account,account,mhb,account,Main bank account for MHB,asset,,,active,2025-11-09 23:43:10.525063
+147,mhb:security deposit:711pine-01,mhb,security deposit,711pine-01,Security Deposit for 711 Pine 01,liability,,,active,2025-11-09 23:43:10.525063
+146,mhb:security deposit:711pine-02,mhb,security deposit,711pine-02,Security Deposit for 711 Pine 02,liability,,,active,2025-11-09 23:43:10.525063
+191,mhb:security deposit:819helen,mhb,security deposit,819helen,Security Deposit for 819 Helen St.,liability,,,active,2025-11-10 08:12:10.794535
+190,mhb:security deposit:905brown,mhb,security deposit,905brown,Security Deposit for 905 Brown St.,liability,,,active,2025-11-10 08:10:28.188245
+79,tax:account,account,tax,account,Federal and State / Personal Corp tax,asset,,,active,2025-11-09 23:43:10.525063
+101,per:auto:gas,auto,gas,auto gas,Gas costs for truck,expense,deductible,,active,2025-11-09 23:43:10.525063
+102,per:auto:maintenance,auto,maintenance,auto maintenance,Maintenance account for truck / cars,expense,deductible,,active,2025-11-09 23:43:10.525063
+173,per:vacation:lodging,personal,lodging,,Vacation lodging,expense,,,active,2025-11-09 23:43:10.525063
+169,per:loan:cadillac,personal,cadillac,cadlillac,cadillac loan personal,expense,,,active,2025-11-09 23:43:10.525063
+171,per:groceries,personal,groceries,groceries,personal groceries for household,expense,,,active,2025-11-09 23:43:10.525063
+172,per:household,personal,household,househole,general household personal expenses,expense,,,active,2025-11-09 23:43:10.525063
+179,per:stmichelle:material,stmichelle,material,,expenses for Michelle's beauty products,expense,,,active,2025-11-09 23:43:10.525063
+180,per:telecom:cable,telecom,cable,,cable in residence,expense,,,active,2025-11-09 23:43:10.525063
+164,per:nv:airfare,nv,airfare,reno,"Travel/expenses for Reno, NV trip (daughter’s job)",expense,deductible,,active,2025-11-09 23:43:10.525063
+186,per:utility:phone:parnell,utility,phone,,Phone (landline) bill for Parnell,expense,,,active,2025-11-09 23:43:10.525063
+104,bgm:ar,bgm,ar,account receivable,bgm accounts receivable,asset,,,active,2025-11-09 23:43:10.525063
+105,bgm:charity,bgm,charity,charity,charitable contributions,expense,deductible,,active,2025-11-09 23:43:10.525063
+106,bgm:equipment:software:license,bgm,equipment,software:license,software license to bgm software,expense,deductible,,active,2025-11-09 23:43:10.525063
+108,bgm:internet:webmeeting,bgm,internet,webmeeting,internet web meeting fees ie:zoom,expense,deductible,,active,2025-11-09 23:43:10.525063
+109,bgm:internet:website,bgm,internet,website,web site development and maintenance fees,expense,deductible,,active,2025-11-09 23:43:10.525063
+112,bgm:prof:training,bgm,prof,training,training and development,expense,deductible,,active,2025-11-09 23:43:10.525063
+113,bgm:proj exp:dining,bgm,proj exp,dining,project expense for dining,expense,deductible,,active,2025-11-09 23:43:10.525063
+114,bgm:proj exp:equipment,bgm,proj exp,equipment,project expense for equipment and rentals,expense,deductible,,active,2025-11-09 23:43:10.525063
+115,bgm:proj exp:gas,bgm,proj exp,gas,gas while traveling for bgm,expense,deductible,,active,2025-11-09 23:43:10.525063
+116,bgm:proj exp:lodging,bgm,proj exp,lodging,lodging while traveling for bgm,expense,deductible,,active,2025-11-09 23:43:10.525063
+117,bgm:rebate,bgm,rebate,,rebate,income,,,active,2025-11-09 23:43:10.525063
+118,bgm:sub:geode,bgm,sub,geode,Geode Environmental Subcontracting Fees,expense,,,active,2025-11-09 23:43:10.525063
+119,bgm:sub:laboratory,bgm,sub,laboratory,Laboratory analysis fees,expense,,,active,2025-11-09 23:43:10.525063
+121,bgm:equipment:computer,equipment,computer,computer equipment,computers and parts for bgm,asset,,,active,2025-11-09 23:43:10.525063
+103,per:bank:fee,bank,fee,bank fees,banks fees used for all accounts,expense,deductible,,active,2025-11-09 23:43:10.525063
+124,per:insurance:auto,insurance,auto,auto insurance,auto / truck insurance costs,expense,,,active,2025-11-09 23:43:10.525063
+125,per:insurance:health,insurance,health,health insurance,health insurance costs,expense,,,active,2025-11-09 23:43:10.525063
+126,per:insurance:life:fb,insurance,life,life insurance,life insurance costs,expense,,,active,2025-11-09 23:43:10.525063
+165,per:nv:auto:gas,nv,auto,reno,"Travel/expenses for Reno, NV trip (daughter’s job)",expense,deductible,,active,2025-11-09 23:43:10.525063
+166,per:nv:dining,nv,dining,reno,"Travel/expenses for Reno, NV trip (daughter’s job)",expense,deductible,,active,2025-11-09 23:43:10.525063
+167,per:nv:lodging,nv,lodging,reno,"Travel/expenses for Reno, NV trip (daughter’s job)",expense,deductible,,active,2025-11-09 23:43:10.525063
+168,per:nv:truck rental,nv,truck rental,reno,"Travel/expenses for Reno, NV trip (daughter’s job)",expense,deductible,,active,2025-11-09 23:43:10.525063
+181,per:telecom:cell,telecom,cell phone,,cell phone,expense,,,active,2025-11-09 23:43:10.525063
+120,per:credit:usaamc,credit,usaamc,credit card,USAA Credit card,liability,,,active,2025-11-09 23:43:10.525063
+123,per:fbreen:tuition,fbreen,tuition,tuition,F.Breen 4 LSSU Tuition,expense,education,,active,2025-11-09 23:43:10.525063
+128,per:loan:nissan,loan,nissan,nissan,nissan loan personal,liability,,,active,2025-11-09 23:43:10.525063
+129,per:loan:unsecured,loan,unsecured,loan,unsecured loan for personal use,liability,,,active,2025-11-09 23:43:10.525063
+107,bgm:draw:fbreen,bgm,fbreen,dispersement,dispersements to F.Breen,expense,deductible,,active,2025-11-09 23:43:10.525063
+110,bgm:draw:mbreen,bgm,mbreen,dispersement,dispersements to M.Breen,expense,deductible,,active,2025-11-09 23:43:10.525063
+111,bgm:draw:mcbreen,bgm,mcbreen,dispersement,dispersements to MC.Breen,expense,deductible,,active,2025-11-09 23:43:10.525063

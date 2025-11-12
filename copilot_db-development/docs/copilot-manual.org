@@ -1,0 +1,116 @@
+#+TITLE: Copilot Accounting System - User Manual
+#+AUTHOR: BreenGeoScience
+#+DATE: 2025-11-06
+#+OPTIONS: toc:3 num:t
+
+* Introduction
+
+Copilot is a comprehensive CLI-based accounting system designed for managing multiple business entities, project tracking, and financial reporting.
+
+** System Philosophy
+
+- *Keyboard-driven*: Minimal mouse usage, designed for i3 WM workflow
+- *Terminal-first*: All operations via CLI, no GUI required
+- *Database-centric*: PostgreSQL as single source of truth
+- *Flexible reporting*: Generate reports on-demand via CLI
+
+** Entities Managed
+
+*** BGS (Breen GeoScience)
+Consulting business with:
+- Project management
+- Time tracking
+- Invoicing
+- Subcontractor management
+- Accounts payable
+
+*** MHB (Rental Properties)
+Real estate portfolio:
+- 711pine
+- 905brown
+- 819helen
+- Property income/expense tracking
+- Mortgage management
+
+*** Future: Investments
+Planned for 2026:
+- Brokerage accounts
+- Retirement accounts (IRA, 401k)
+- Stock/bond positions
+
+* System Components
+
+** Database: copilot_db
+
+PostgreSQL database with schemas:
+- =acc= - Core accounting (transactions, categories, bank accounts)
+- =bgs= - Project management (projects, tasks, timesheets, invoices)
+- =mhb= - Real estate (properties, rent, mortgages)
+- =invest= - Investments (future)
+
+** CLI Application: copilot
+
+Python-based command-line interface:
+#+begin_src bash
+copilot import       # Import bank transactions
+copilot allocate     # Categorize transactions
+copilot invoice      # Manage invoices
+copilot timesheet    # Enter time
+copilot report       # Generate reports
+copilot ap           # Accounts payable
+#+end_src
+
+* Daily Workflows
+
+** Morning Routine
+
+1. Check accounts receivable
+2. Review pending transactions
+3. Enter yesterday's time
+4. Check project status
+
+** Weekly Tasks
+
+1. Import bank statements
+2. Categorize all transactions
+3. Review AR aging
+4. Generate project status reports
+
+** Monthly Tasks
+
+1. Generate invoices for completed work
+2. Pay subcontractors
+3. Reconcile bank accounts
+4. Generate P&L statements by entity
+5. Property income/expense reports
+
+** Year-end Tasks
+
+1. Generate tax summary report
+2. Verify all transactions categorized
+3. Archive completed projects
+4. Prepare accountant package
+
+* Command Reference
+
+See [[file:workflows.org][Workflows]] for detailed command usage.
+
+* Troubleshooting
+
+** Database Connection Issues
+
+#+begin_src bash
+# Test connection
+psql -h 192.168.30.180 -U frank -d copilot_db -c "SELECT version();"
+
+# Check .env file
+cat .env
+#+end_src
+
+** Import Errors
+
+Check CSV format matches expected structure.
+
+* Support
+
+For issues, see [[https://github.com/BreenGeoScience/copilot_db-development/issues][GitHub Issues]].

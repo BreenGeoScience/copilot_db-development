@@ -1,0 +1,328 @@
+"TFR TO CHECKING",bgm:account
+DEPOSIT,bgm:ar
+"BARAGA EDUCATI ONAL CG",bgm:charity
+"EB CALL TO HOLINES S C ",bgm:charity
+"ASHMUN ST SAULT ST. MAR MI",bgm:draw:fbreen
+"AUGUSTI*NE FORMED.ORG",bgm:draw:fbreen
+"BURGER KING Q",bgm:draw:fbreen
+"CARDINAL STUDIOS LLC",bgm:draw:fbreen
+"CHICAGO BOOKS",bgm:draw:fbreen
+"DAILY WIRE - TX",bgm:draw:fbreen
+"FIRST THINGS",bgm:draw:fbreen
+"FRANCIS BREEN",bgm:draw:fbreen
+"THOSE CATHOLIC MEN INC",bgm:draw:fbreen
+"VALUE VILLAGE ",bgm:draw:fbreen
+"WINCHESTER S MACKINAC",bgm:draw:fbreen
+GEOTECH,bgm:equipment:rental
+"ENVIRONMENTAL SIMULATI",bgm:equipment:software
+WAL-MART,bgm:groceries
+"DEPT. NATURAL RESOURCE - CGWP",bgm:license
+"ANDERSENS CAFE JOHNSTON CITY IL","bgm:proj exp:dining"
+"ANGULAR ST BURLINGTON IA","bgm:proj exp:dining"
+"ANOTHER BROKEN EGG - BATO BATON","bgm:proj exp:dining"
+APPLEBEES,"bgm:proj exp:dining"
+"BEACON & BRIDGE MRKT FREDERIC","bgm:proj exp:dining"
+"BEGGAR'S BANQUET","bgm:proj exp:dining"
+"BIG BOY ","bgm:proj exp:dining"
+"BIG MUDDY'S BURLINGTON IA","bgm:proj exp:dining"
+"BLUE DOG CAFE LAFAYETTE LA","bgm:proj exp:dining"
+"BOB EVANS","bgm:proj exp:dining"
+"BOURQUE'S SUPERMARK","bgm:proj exp:dining"
+"CAFE MOSAIC - OPELOUSA","bgm:proj exp:dining"
+"CAFE VERMILIONVILLE LAFAYETTE LA","bgm:proj exp:dining"
+"CASEYS ","bgm:proj exp:dining"
+CHICK-FIL-A,"bgm:proj exp:dining"
+CLADDAGH,"bgm:proj exp:dining"
+"CORNER BAKERY","bgm:proj exp:dining"
+"CORNER STORE","bgm:proj exp:dining"
+"COUNTY EMMET","bgm:proj exp:dining"
+"CRACKER BARREL","bgm:proj exp:dining"
+"D AND D GROCERIES","bgm:proj exp:dining"
+DENNY'S,"bgm:proj exp:dining"
+"DOMINO'S ","bgm:proj exp:dining"
+"FIREHOUSE SUBS","bgm:proj exp:dining"
+"FLAP JACK SHACK","bgm:proj exp:dining"
+"FUJI STEAK HOUS","bgm:proj exp:dining"
+"GATOR COVE","bgm:proj exp:dining"
+"TEXAS ROADHOUSE","bgm:proj exp:dining"
+"THE CHOP HOUSE SMOKYS","bgm:proj exp:dining"
+"THE DRAKE RESTAURANT","bgm:proj exp:dining"
+"THE GRAND","bgm:proj exp:dining"
+"TST* JACK'S RESTAURANT RAPID RIV","bgm:proj exp:dining"
+"CIRCLE K","bgm:proj exp:gas"
+"AMERICAN ","bgm:proj exp:lodging"
+AMERICINN,"bgm:proj exp:lodging"
+"BEST WESTERN","bgm:proj exp:lodging"
+"COMFORT INN","bgm:proj exp:lodging"
+COURTYARD,"bgm:proj exp:lodging"
+"SUPER MOTELS","bgm:proj exp:lodging"
+"TERRACE BAY HOTEL","bgm:proj exp:lodging"
+"THE LANDMARK INN","bgm:proj exp:lodging"
+"ADVANCE AUTO PARTS ",bgm:proj_exp:equipment
+"CENEX PREMIER ",bgm:proj_exp:gas
+CHEVRON,bgm:proj_exp:gas
+CITGO,bgm:proj_exp:gas
+CONOCO,bgm:proj_exp:gas
+"EXXONMOBIL ",bgm:proj_exp:gas
+"HOLIDAY STATIONS SA",bgm:proj_exp:gas
+"KRIST OIL",bgm:proj_exp:gas
+"LOVE'S ST. CHARL MN",bgm:proj_exp:gas
+"MARATHON PETRO ",bgm:proj_exp:gas
+MOBIL,bgm:proj_exp:gas
+"DOHERTY RESTAURANT",bgm:proj_exp:meal
+"DUNN BROTHERS COFFEE -",bgm:proj_exp:meal
+"PERKINS RESTAU",bgm:proj_exp:meal
+"GOLDEN GATE",bgm:proj_exp:meals
+REBATE,bgm:rebate
+GEODE,bgm:sub:geode
+ZOOM.US,bgm:telecom:webmeeting
+CVS/PHARMACY,bgs:proj_exp:dining
+AIRBNB,bmg:proj_exp:lodging
+"BALANCE TRANSFER FOR ACCT ENDING",cash:account
+CASH,cash:account
+CASHWITHDRAWAL,cash:account
+CHECK,cash:account
+"DEBIT MEMO",cash:account
+DEPOSIT,cash:account
+"TYME CASH WITHDRAWAL TERMINAL T",cash:account
+"TYME REGIONAL CASH WITHDRAWAL TE",cash:account
+"USAA CREDIT CARD PAYMENT SAN ANT",cash:account
+W/DRAWL,cash:account
+WITHDRAWAL,cash:account
+"ACC ",csb:account
+"TRANSFER FROM CSB",csb:account
+"TRANSFER TO CSB ACCOUNT",csb:account
+"TRANSFER TO LOAN NOTE ",csb:account
+"TFR FRM CHECKING",debit:account
+broad_keyword,gl_account_code
+"DAFTER LANDFILL",mhb:disposal
+"GFL BRIMEY",mhb:disposal
+"RENTAL PAYMENT",mhb:equipment:rental
+"A&K OUTDOOR SERVICES",mhb:maintenance
+"DON EARL HEATING",mhb:maintenance
+ERICKSON,mhb:maintenance
+"TONY CHAMPION",mhb:maintenance
+"TRACTOR SUPPLY",mhb:maintenance
+"PARKERS HARDWA",mhb:maintenance:
+"PARKERS HARDWARE",mhb:maintenance:
+"PETES APPLIANC",mhb:maintenance:
+"DEBIT SOO FIREPLACE",mhb:maintenance:711pine
+ESCROW,mhb:mortgage:escrow
+"ORKIN LLC G",mhb:pestcontol
+"CREDIT NIKLAS WOODARD SENDER ",mhb:rent:905brown
+"DALE HOORNSTRA",mhb:snow_removal
+"CHIPPEWA COUNTY TREASURER -",mhb:tax
+"DELTA ",nv:airfare
+"DETROIT AIPORT NEW BOSTO",nv:meal
+BP,per:auto:gas
+PILOT,per:auto:gas
+SHELL,per:auto:gas
+STINKER,per:auto:gas
+"WHITETAIL CROSSING TOMAHT",per:auto:gas
+YESWAY,per:auto:gas
+"DODGE STORE BLYTHEVILLE AR",per:auto:maintenance
+"PRECISION AUTO",per:auto:maintenance
+"QUICK LUBE",per:auto:maintenance
+"U P TIRE",per:auto:maintenance
+"U P TIRE SAULT S M MI",per:auto:maintenance
+"*FINANCE CHARGE* PURCHASE",per:bank:fee
+"ATM USAGE FEES",per:bank:fee
+"BANK FEE",per:bank:fee
+BP,per:bank:fee
+"CALCULATED SERVICE CHARGE TYPE F",per:bank:fee
+"CENTRAL SAVINGS",per:bank:fee
+"CHECK PRINTING FEE",per:bank:fee
+"CONTINUOUS OD CHARGE DAY",per:bank:fee
+"CONTINUOUS OD CHARGE DAYS",per:bank:fee
+"DEBIT FEE TRANSACTIONAL",per:bank:fee
+"DEBIT MEMO - CHECKS PAID",per:bank:fee
+FEE,per:bank:fee
+"FEE TRANSACTIONAL",per:bank:fee
+"FEE TRANSACTIONAL - PREA",per:bank:fee
+"HARLAND CLARKE",per:bank:fee
+"MAINTENANCE FEE",per:bank:fee
+OVERDRAFT,per:bank:fee
+WITHDRAWAL,per:bank:fee
+"DR CRAIG MERCER DDS SAULT S MARI",per:dental
+"DR. MERCER",per:dental
+"AUSTIN S CIGAR",per:dining
+"AUSTIN'S CIGAR LOUNGE",per:dining
+"BIGGBY COFFEE",per:dining
+"BIRD S EYE OUT FITTER",per:dining
+"BIRD S EYE OUT FITTERS",per:dining
+"BIRD'S EYE",per:dining
+"BIRD'S EYE OUT FITT",per:dining
+"CHINA CATE",per:dining
+"CUP OF THE DAY",per:dining
+DOORDASH,per:dining
+"DRIFTER'S FAMILY RESTA",per:dining
+"DRIFTWOOD RESTAURA NT ",per:dining
+"FRANKS PLACE",per:dining
+HARDEES,per:dining
+"JOSES MEXICAN REST AURANT",per:dining
+"LITTLE CAESARS",per:dining
+"MOLONEYS ALLEY",per:dining
+"PENNYS KITCHEN SAULT SAI",per:dining
+"PURE COUNTRY RESTA URANT",per:dining
+"SOO CURLERS ASSOCI ATION",per:dining
+"SUPERIOR COFFE",per:dining
+"THE BUBBLE ROOM",per:dining
+"THE STONEHOUSE",per:dining
+"TST* GOOD RESTAURANT &",per:dining
+WINERY,per:dining
+ZORBAS,per:dining
+"CBS ALL ACCESS",per:entertain:movies
+"GALAXY CINEMAS",per:entertainment:movies
+"DOUD'S MARKET",per:groceries
+"FOUR SEASONS",per:groceries
+"GFS STORE",per:groceries
+"PAT S FOODS SAULT SAI MI",per:groceries
+"PAT'S FOODS",per:groceries
+"RJ S MARKET",per:groceries
+"WM SUPERC",per:groceries
+ARDENE,per:household
+ARFSTROM,per:household
+"ARK ENCOUNTER",per:household
+"BIG LOTS",per:household
+DICK'S,per:household
+"DOLLAR TREE",per:household
+"DULUTH TRADING",per:household
+"DUNHAMS ",per:household
+EDGERLYS,per:household
+"FLORES MARIAE GIFT SHO",per:household
+"GETZS DEPARTMENT STORE",per:household
+HOMEAWAY,per:household
+KOHLS,per:household
+"LESAINTEMICHEL LE",per:household
+"MACKINAC ISLAND FE",per:household
+"MEIJER SAULT ST MI -",per:household
+"RITE AID SAULT ST",per:household
+"THE STORE",per:household
+"TLF*COED FLOWERS",per:household
+WALGREENS,per:household
+YOUNKERS,per:household
+"USAA P&C AUTOPAY",per:insurance:auto
+"USAA P&C EXT",per:insurance:auto
+"USAA P&C EXT AUTOPAY",per:insurance:auto
+"CCMSPECIALXFER SPECIALACH",per:insurance:health
+"CHRISTIAN CARE MINISTR",per:insurance:health
+"CHRISTIANCAREMIN PAID",per:insurance:health
+"USAA.COM PAY EXT LIFE",per:insurance:life:fb
+"DR. OCONNOR",per:medical
+CENEX,per:nv:dining
+"COUNTRY INN",per:nv:lodging
+"WESTWOOD INN & SUITES",per:nv:lodging
+SPECTRUM,per:telecom:cable
+"AT&T WIRELESS",per:telecom:cell
+"ATT PAYMENT",per:telecom:cell
+"CONSUMERCELLULAR WEBPAYMENT",per:telecom:cell
+"CHARTER COMM",per:utility:cable
+"CHARTER COMMUNIC CHARTER CO",per:utility:cable
+"CLOVERLAND ELECT WEB PMTS ",per:utility:electric:parnell
+"DEBIT CLOVERLAND ELECT WEB PMTS",per:utility:electric:parnell
+"DEBIT DTE ENERGY ",per:utility:gas:parnell
+"DTE ENERGY ",per:utility:gas:parnell
+"CITY OF SAULT STE MARI",per:utility:water:parnell
+"CITY SSM",per:utility:water:parnell
+"CITY SSM -",per:utility:water:parnell
+"DEBIT PNP BILLPAYMENT EK ",per:utility:water:parnell
+"SAULT ST MARI E COUNSA",per:utility:water:parnell
+"ACC ",tax:account
+"BANK OF AMERI PAYMENT",tax:account
+WITHDRAWAL,tax:account
+"AA PMT DEBIT TERMINAL ",TODO
+"ACH CREDIT MERCH PMT HUNTINGTON",TODO
+ACH/AUTOPAYMENT,TODO
+ADJUSTMENT,TODO
+"AIRGASS NORTH INDEPENDENCE OH",TODO
+ALBERT,TODO
+ALLY,TODO
+"ALPINE CHOCOLAT",TODO
+AMAZON,TODO
+"ANYTIME FIT ABC CLUB FEES",TODO
+"ANYTIME TOWING AND RSA",TODO
+"APGO TORONTO CD",TODO
+"AUDIBLE US",TODO
+"AUTOMATIC LOAN PAY",TODO
+"AUTOMATIC LOAN PAY",TODO
+"B BOUTIQUE",TODO
+BAILEY'S,TODO
+BAILEY'S,TODO
+BALANCE,TODO
+"BANK FEE",TODO
+"BARAGA LAKESIDE INN",TODO
+BARISHS,TODO
+"BARRE COUNTRY DINER",TODO
+"BEACON BRIDG",TODO
+"BELLA LIQUOR AND WINE",TODO
+"BILL ME LATER",TODO
+"BIRCH COMMUNC",TODO
+"BIRCH COMMUNIC",TODO
+"BISHOP BARAGA ASSOCIATION",TODO
+"BLACK ROCK",TODO
+BLS*BALTSOFT,TODO
+BP#BADGE,TODO
+BP#GIRI,TODO
+BP#HAPPY,TODO
+BP#HOLLY,TODO
+"BREEN GEOSCIENCE -",TODO
+CARE.CITRIXONLI,TODO
+CASH,TODO
+"CASH ADVANCE FEE",TODO
+"CATHOLIC SUPPLY",TODO
+"CENTRAL SAVIN PAYMENT",TODO
+"CENTRAL SAVINGS",TODO
+"CENTRAL SAVINGS BANK",TODO
+"CENTRAL SAVINGS BANK -",TODO
+CHANDLER'S,TODO
+CHECK,TODO
+"CORPORATE ACH IR",TODO
+"CORPORATE ACH STATE OF M MI UIA",TODO
+"CORPORATE ACH USATAXPYMT IRS ",TODO
+CSB,TODO
+"CSB LOAN PAYMENT - INTEREST",TODO
+"CSB LOAN PAYMENT - PRINCIPLE",TODO
+"CSB UNSECURED LOAN",TODO
+DEPOSIT,TODO
+DNH*GODADDY.COM,TODO
+"DODGE STORE BLYTHEVILLE AR",TODO
+DROPBOX,TODO
+DUNHAMS,TODO
+ESCROW,TODO
+EXPRESSVPN.COM,TODO
+"HUNTINGTON BP",TODO
+"IRS USATAXPY",TODO
+"PAYPAL TAIMIFUMT A ",TODO
+"TRF FROM ACC ",TODO
+"TRF FROM ACC - CREDIT",TODO
+"TRF LOAN ACC NOTE NO ",TODO
+"TRF TO LOAN ACCT NOTE NO ",TODO
+"TST* WINCHESTER S MACKINAC ISLA",TODO
+"TX BD OF PRO GEO RENEW FEE",TODO
+"U HAUL MOVING ST G OF DRE",TODO
+"U HAULANYTIME TOWI NG AND",TODO
+UDEMY,TODO
+"UP NORTH NUTRITION",TODO
+"URBAN-OUT EGRA",TODO
+"US TREASURER - IRS",TODO
+"US TREASURY",TODO
+"USAA CHK-INTRNT TRANSFER",TODO
+"USAA CREDIT CARD PAYMENT SAN ANT",TODO
+"USAA.COM PAY EXT LIFE",TODO
+"USAA.COM PAYMNT CREDIT CRD",TODO
+"USATAXPYMT IRS",TODO
+"VALUE VILLAGE ",TODO
+"VERN MIRON",TODO
+"VISTAPRINT MA",TODO
+"VISTAPRINT MA -",TODO
+W/DRAWL,TODO
+"WACKY WINGS EATERY & B",TODO
+"WIRE LESS . FEE/ MITCHEL GOR",TODO
+"WIRE LESS . FEE/ MITCHELL GO",TODO
+"WISE OWL TECHNO",TODO
+"WISE OWL TECHNOLOGIES",TODO
+"WISE OWL TECHNOLOGIES -",TODO
+"WISE OWL TECHNOLOGIES SAULT SAIN",TODO
+WITHDRAWAL,TODO
+"USAA MC PAYMENT",usaamc:credit
+"USAA.COM PAYMNT CREDIT CRD",usaamc:credit

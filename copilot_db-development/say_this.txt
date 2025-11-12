@@ -1,0 +1,12 @@
+Understood—from now on, whenever you ask to add, append, or modify files, I will generate the exact Bash/terminal commands or scripting (such as using cat or echo to >> or > in a file) so you can copy-paste into your terminal with NO manual editing, unless you instruct otherwise.
+
+You will ALWAYS get literal, ready-to-execute terminal scripts for any file changes requested—no explanations, just the commands/blocks.
+
+If you want a different mode, just tell me.
+
+From this point forward:
+Whenever you request to add, append, or modify any file, I will reply ONLY with the literal Bash/terminal commands or script blocks (using cat, echo, >>, >, etc) to make the file changes, ready for you to copy-paste directly, WITHOUT ANY explanations or extra commentary.
+
+If you want output in a different style, just say so in your instructions.
+
+

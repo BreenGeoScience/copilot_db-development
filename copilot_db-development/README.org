@@ -1,0 +1,70 @@
+#+TITLE: Copilot Accounting System
+#+AUTHOR: BreenGeoScience
+#+DATE: 2025-11-06
+
+* Overview
+
+Copilot is a CLI-based accounting system designed for multi-entity project management and financial reporting.
+
+** Features
+- Multi-entity accounting (BGS consulting, MHB rental properties)
+- Project management with time tracking and invoicing
+- Accounts payable/receivable tracking
+- Bank transaction imports with smart categorization
+- Financial reporting (P&L by entity, cash flow, tax reports)
+- Investment tracking (planned for 2026)
+
+** Technology Stack
+- PostgreSQL database (=copilot_db=)
+- Python 3.x CLI application
+- Emacs ORG-MODE documentation
+- Keyboard-driven workflow (minimal mouse usage)
+
+* Quick Start
+
+#+begin_src bash
+# Clone the repository
+gh repo clone BreenGeoScience/copilot_db-development
+cd copilot_db-development
+
+# Set up environment
+cp .env.example .env
+# Edit .env with your database credentials
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Initialize database
+psql -h 192.168.30.180 -U frank -c "CREATE DATABASE copilot_db;"
+psql -h 192.168.30.180 -U frank -d copilot_db -f sql/schema/01_core.sql
+#+end_src
+
+* Documentation
+
+See =docs/= directory for complete documentation:
+- [[file:docs/installation.org][Installation Guide]]
+- [[file:docs/copilot-manual.org][User Manual]]
+- [[file:docs/database-schema.org][Database Schema]]
+- [[file:docs/migration-guide.org][Migration Guide]]
+- [[file:docs/workflows.org][Daily Workflows]]
+- [[file:docs/reports.org][Reports Reference]]
+
+* Directory Structure
+
+#+begin_example
+copilot_db-development/
+├── docs/              # ORG-MODE documentation
+├── sql/               # Database schema and migrations
+│   ├── schema/        # Core database schema
+│   ├── migrations/    # Data migration scripts
+│   └── views/         # Reporting views
+├── copilot/           # Python CLI application
+│   ├── commands/      # CLI commands
+│   ├── lib/           # Helper libraries
+│   └── models/        # Data models
+└── tests/             # Unit tests
+#+end_example
+
+* License
+
+Private - BreenGeoScience internal use only

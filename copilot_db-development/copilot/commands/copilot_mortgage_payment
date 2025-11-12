@@ -1,0 +1,112 @@
+#!/usr/bin/env python3
+import psycopg2
+from datetime import date, datetime
+import getpass
+
+def get_mortgage_accounts(entity_code, property_code):
+    prefix = entity_code if entity_code else "mhb"
+    principal = f"{prefix}:mortgage:{property_code}"
+    interest = f"{prefix}:mortgage:interest:{property_code}"
+    escrow = f"{prefix}:mortgage:escrow:{property_code}"
+    fees = f"{prefix}:mortgage:fees:{property_code}"
+    cash = f"{prefix}:account"
+    return principal, interest, escrow, fees, cash
+
+def input_payment_details():
+    while True:
+        entity_code = input("Enter entity code (bgs, mhb, per) [default: mhb, q to quit]: ").strip()
+        if entity_code.lower() == 'q':
+            return None
+        prop = input("Property code (e.g., 711pine, parnell, q to quit): ").strip()
+        if prop.lower() == 'q':
+            return None
+        total_pmt_in = input("Total payment amount (q to quit): ").strip()
+        if total_pmt_in.lower() == 'q':
+            return None
+        principal_pmt_in = input("Principal paid (q to quit): ").strip()
+        if principal_pmt_in.lower() == 'q':
+            return None
+        interest_pmt_in = input("Interest paid (q to quit): ").strip()
+        if interest_pmt_in.lower() == 'q':
+            return None
+        escrow_pmt_in = input("Escrow paid (q to quit): ").strip()
+        if escrow_pmt_in.lower() == 'q':
+            return None
+        fees_pmt_in = input("Fees paid (q to quit): ").strip()
+        if fees_pmt_in.lower() == 'q':
+            return None
+        date_str = input(f"Payment date (YYYY-MM-DD, default={date.today()}, q to quit): ").strip()
+        if date_str.lower() == 'q':
+            return None
+        try:
+            total_pmt = float(total_pmt_in)
+            principal_pmt = float(principal_pmt_in)
+            interest_pmt = float(interest_pmt_in)
+            escrow_pmt = float(escrow_pmt_in)
+            fees_pmt = float(fees_pmt_in)
+        except ValueError:
+            print("Invalid number entered. Please start again.\n")
+            continue
+        sum_parts = principal_pmt + interest_pmt + escrow_pmt + fees_pmt
+        if abs(sum_parts - total_pmt) > 0.01:
+            print("\nAmounts do not add up to the total payment.")
+            print(f"Total Payment:     {total_pmt}")
+            print(f"  Principal paid:  {principal_pmt}")
+            print(f"  Interest paid:   {interest_pmt}")
+            print(f"  Escrow paid:     {escrow_pmt}")
+            print(f"  Fees paid:       {fees_pmt}")
+            print(f"  Sum of parts:    {sum_parts}")
+            print("Please start again.\n")
+            continue
+        date_val = date_str or str(date.today())
+        return {
+            'entity_code': entity_code,
+            'property_code': prop,
+            'total_payment': total_pmt,
+            'principal': principal_pmt,
+            'interest': interest_pmt,
+            'escrow': escrow_pmt,
+            'fees': fees_pmt,
+            'date': date_val,
+        }
+
+def post_jl_entry(conn, entry_date, entry_description, lines):
+    operator = getpass.getuser()
+    now = datetime.now()
+    with conn.cursor() as cur:
+        for line in lines:
+            cur.execute("""
+                INSERT INTO stage.tier2_stage
+                (tier1_stage_id, entry_date, gl_account_code, debit, credit, line_description, entity, status, created_at, updated_at, operator, memo)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            """, (
+                None, entry_date, line['gl_account_code'], line['debit'], line['credit'],
+                line['line_description'], line['entity'], 'manual', now, now, operator, entry_description
+            ))
+        conn.commit()
+    print(f"Mortgage payment posted to stage.tier2_stage.")
+
+def main():
+    conn = psycopg2.connect(
+        host="192.168.30.180", dbname="copilot_db", user="frank"
+    )
+    while True:
+        payment = input_payment_details()
+        if payment is None:
+            print("Exiting mortgage payment entry.")
+            break
+        principal_acct, interest_acct, escrow_acct, fees_acct, cash_acct = get_mortgage_accounts(payment['entity_code'], payment['property_code'])
+        entity_prefix = payment['entity_code'] if payment['entity_code'] else "mhb"
+        lines = [
+            {'gl_account_code': principal_acct, 'debit': 0.0, 'credit': payment['principal'], 'line_description': "Mortgage principal payment", 'entity': entity_prefix},
+            {'gl_account_code': interest_acct,  'debit': payment['interest'], 'credit': 0.0, 'line_description': "Mortgage interest expense", 'entity': entity_prefix},
+            {'gl_account_code': escrow_acct,    'debit': payment['escrow'], 'credit': 0.0, 'line_description': "Escrow deposit", 'entity': entity_prefix},
+            {'gl_account_code': fees_acct,      'debit': payment['fees'], 'credit': 0.0, 'line_description': "Fees paid", 'entity': entity_prefix},
+            {'gl_account_code': cash_acct,      'debit': 0.0, 'credit': payment['total_payment'], 'line_description': "Cash paid", 'entity': entity_prefix},
+        ]
+        entry_description = f"Mortgage payment {payment['property_code']} on {payment['date']}"
+        post_jl_entry(conn, payment['date'], entry_description, lines)
+    conn.close()
+
+if __name__ == "__main__":
+    main()

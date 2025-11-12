@@ -1,0 +1,59 @@
+old_gl_account_code,new_gl_account_code
+"bank : fee",per:bank:fee
+"personal : dining",per:dining
+"auto : maintenance",per:auto:maintenance
+"mhb : maintenance : 711pine",mhb:maintenance:711pine
+"mhb: maintenance : 711pine",mhb:maintenance:711pine
+"proj exp : meal","bgm:proj exp:dining"
+"fee : bank",per:bank:fee
+"nv : auto : gas",per:auto:gas
+"nv : dining",per:nv:dining
+"nv : lodging",per:nv:lodging
+"personal : groceries",per:groceries
+"bgm : charity",bgm:charity
+"bgm : ar",bgm:ar
+"proj exp : lodging","bgm:proj exp:lodging"
+"dispersement : fb",bgm:draw:fbreen
+"proj exp : dining","bgm:proj exp:dining"
+"account : cash",cash:account
+proj:vehicle:maintenance:brown,mhb:maintenance:905brown
+proj:meals,"bgm:proj exp:dining"
+"proj:proj exp:gas","bgm:proj exp:gas"
+"telecom : cell",per:telecom:cell
+"telecom : cable",per:telecom:cable
+"insurance : auto",per:insurance:auto
+"insurance : health",per:insurance:health
+"insurance : life : fb",per:insurance:life:fb
+"bgm : proj exp:lodging","bgm:proj exp:lodging"
+bgm:fees:bank,per:bank:fees
+mhb:equipment,"bgm:proj exp:equipment"
+"mhb : equipment","bgm:proj exp:equipment"
+per:groceries,per:groceries
+"account : tax",tax:account
+"utility : water : 1108parnell",per:utility:water:parnell
+"utility : electric : 1108parnell",per:utility:electric:parnell
+"utility : gas : 1108parnell",per:utility:gas:parnell
+"utility : gas : 905brown",mhb:utility:gas:905brown
+"credit : usaamc",usaamc:credit
+"misc : unidentified",misc:unidentified
+bgm:sub:geode,bgm:sub:geode
+sub:lab,bgm:sub:laboratory
+proj:equipment,"bgm:proj exp:equipment"
+bgm:account,bgm:account
+bgm:ar,bgm:ar
+bgm:charity,bgm:charity
+bgm:draw:fbreen,bgm:draw:fbreen
+bgm:draw:mbreen,bgm:draw:mbreen
+bgm:draw:mcbreen,bgm:draw:mcbreen
+bgm:equipment:computer,bgm:equipment:computer
+bgm:equipment:software:license,bgm:equipment:software:license
+bgm:internet:webmeeting,bgm:internet:webmeeting
+bgm:internet:website,bgm:internet:website
+bgm:prof:training,bgm:prof:training
+"bgm:proj exp:dining","bgm:proj exp:dining"
+"bgm:proj exp:equipment","bgm:proj exp:equipment"
+"bgm:proj exp:gas","bgm:proj exp:gas"
+"bgm:proj exp:lodging","bgm:proj exp:lodging"
+bgm:rebate,bgm:rebate
+bgm:sub:geode,bgm:sub:geode
+bgm:sub:laboratory,bgm:sub:laboratory

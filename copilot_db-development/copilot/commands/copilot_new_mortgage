@@ -1,0 +1,107 @@
+#!/usr/bin/env python3
+import psycopg2
+from datetime import datetime
+
+def account_exists(conn, gl_account_code):
+    with conn.cursor() as cur:
+        cur.execute("SELECT 1 FROM acc.gl_accounts WHERE gl_account_code = %s", (gl_account_code,))
+        return cur.fetchone() is not None
+
+def insert_account(conn, acct):
+    if not account_exists(conn, acct['gl_account_code']):
+        with conn.cursor() as cur:
+            cur.execute("""
+                INSERT INTO acc.gl_accounts 
+                (gl_account_code, major, sub, detail, description, account_type, tax_category, status, created_at)
+                VALUES (%(gl_account_code)s, %(major)s, %(sub)s, %(detail)s, %(description)s, %(account_type)s, %(tax_category)s, %(status)s, %(created_at)s)
+            """, {**acct, "created_at": datetime.now()})
+            conn.commit()
+        print(f"Created account {acct['gl_account_code']}")
+    else:
+        print(f"Account {acct['gl_account_code']} already exists. Skipping.")
+
+def new_mortgage_accounts(property_code, property_label):
+    principal = {
+        "gl_account_code": f"mhb:mortgage:{property_code}",
+        "major": "mhb",
+        "sub": "mortgage",
+        "detail": property_code,
+        "description": f"Mortgage balance for {property_label}",
+        "account_type": "liability",
+        "tax_category": "property",
+        "status": "active"
+    }
+    interest = {
+        "gl_account_code": f"mhb:mortgage:interest:{property_code}",
+        "major": "mhb",
+        "sub": "interest",
+        "detail": f"{property_code} interest",
+        "description": f"Mortgage interest expense for {property_label}",
+        "account_type": "expense",
+        "tax_category": "property",
+        "status": "active"
+    }
+    escrow = {
+        "gl_account_code": f"mhb:mortgage:escrow:{property_code}",
+        "major": "mhb",
+        "sub": "mortgage",
+        "detail": f"{property_code} escrow",
+        "description": f"Escrow for mortgage on {property_label}",
+        "account_type": "asset",
+        "tax_category": "escrow",
+        "status": "active"
+    }
+    fees = {
+        "gl_account_code": f"mhb:mortgage:fees:{property_code}",
+        "major": "mhb",
+        "sub": "fees",
+        "detail": f"{property_code} fees",
+        "description": f"Fees for mortgage on {property_label}",
+        "account_type": "expense",
+        "tax_category": "fees",
+        "status": "active"
+    }
+    return [principal, interest, escrow, fees]
+
+def insert_mortgage(conn, metadata):
+    with conn.cursor() as cur:
+        cur.execute("""
+            INSERT INTO acc.mortgages
+            (gl_account_code, property_label, issued_on, original_balance, interest_rate, matures_on, lender, notes)
+            VALUES (%(gl_account_code)s, %(property_label)s, %(issued_on)s, %(original_balance)s, %(interest_rate)s, %(matures_on)s, %(lender)s, %(notes)s)
+        """, metadata)
+        conn.commit()
+    print(f"Inserted mortgage metadata for {metadata['gl_account_code']}")
+
+def main():
+    conn = psycopg2.connect(
+        host="192.168.30.180", dbname="copilot_db", user="frank"
+    )
+    code   = input("Property code (e.g. 711pine): ").strip()
+    label  = input("Property label (e.g. 711 Pine Street): ").strip()
+    issued_on = input("Issued on (YYYY-MM-DD): ").strip()
+    origin_bal = float(input("Original balance: ").strip())
+    rate = float(input("Interest rate (percent): ").strip())
+    mat_on  = input("Matures on (YYYY-MM-DD): ").strip()
+    lender  = input("Lender (bank): ").strip()
+    notes   = input("Notes (optional): ")
+
+    accounts = new_mortgage_accounts(code, label)
+    for acct in accounts:
+        insert_account(conn, acct)
+
+    mortgage_row = {
+        'gl_account_code': accounts[0]['gl_account_code'],
+        'property_label': label,
+        'issued_on': issued_on,
+        'original_balance': origin_bal,
+        'interest_rate': rate,
+        'matures_on': mat_on if mat_on else None,
+        'lender': lender,
+        'notes': notes
+    }
+    insert_mortgage(conn, mortgage_row)
+    conn.close()
+
+if __name__ == "__main__":
+    main()
